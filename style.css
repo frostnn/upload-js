@@ -50,3 +50,81 @@ body {
 input[type='file'] {
   display: none;
 }
+
+.prev {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.prev_img {
+  margin-bottom: 10px;
+  margin-right: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.removing {
+  transform: scale(0);
+  transition: 0.3s;
+}
+.prev_img img {
+  width: 170px;
+  height: auto;
+}
+
+.prev_remove {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-weight: bold;
+  background: rgb(255, 255, 255, 0.5);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.prev_info {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: -20px;
+  height: 25px;
+  font-size: 10px;
+  font-weight: bold;
+  background: rgb(255, 255, 255, 0.5);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  transition: 0.3s;
+  padding: 0 5px;
+}
+
+.prev_img:hover .prev_remove {
+  opacity: 1;
+}
+
+.prev_img:hover .prev_info {
+  bottom: 4px;
+}
+
+.prev_info-progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: #42b983;
+  text-align: center;
+  transition: width 0.3s;
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
